@@ -14,16 +14,26 @@ const HomePage = () => {
       <div>
         <LazyHero
           imageSrc='./innovation.jpg'
-          className='hero-image'
-          minHeight='75vh'
+          minHeight='100vh'
           parallaxOffset={100}
           opacity={0.4}
           color='#000080'
         >
           <Typography variant='h1' color='secondary'>
-            Welcome
+            Matthew Marberry
+          </Typography>
+          <Typography variant='h5' color='secondary'>
+            Building reliable solutions for real-world problems.
           </Typography>
         </LazyHero>
+      </div>
+      <div className='section'>
+        <div className='left60'>
+          <Typography variant='h5'>Welcome to my website</Typography>
+        </div>
+        <div className='right40 blueBg'>
+          <img src='./portfolioPicture.jpg' className='img blueOverlay' />
+        </div>
       </div>
       <Typist cursor={{ show: false }}>
         <Typography variant='h3' cur>
