@@ -5,6 +5,7 @@ import LazyHero from 'react-lazy-hero';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import Typist from 'react-typist';
 
 const HomePage = () => {
   return (
@@ -19,9 +20,17 @@ const HomePage = () => {
           opacity={0.4}
           color='#000080'
         >
-          <Typography variant='h1'>Welcome</Typography>
+          <Typography variant='h1' color='secondary'>
+            Welcome
+          </Typography>
         </LazyHero>
       </div>
+      <Typist cursor={{ show: false }}>
+        <Typography variant='h3' cur>
+          Welcome to my little react website
+        </Typography>
+        <Typography variant='h3'>Thank you for visiting</Typography>
+      </Typist>
       <div className='flexContainer'>
         <div className='blueBg'>
           <h1>Second container</h1>

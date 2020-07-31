@@ -20,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
+    display: 'flex',
+    justifyContent: 'flex-start',
     flexGrow: 1,
   },
 }));
@@ -49,26 +51,24 @@ const Navbar = () => {
   return (
     <AppBar position='static'>
       <Toolbar>
-        <IconButton
-          edge='start'
-          className={classes.menuButton}
-          color='inherit'
-          aria-label='menu'
-        >
-          <MenuIcon />
-        </IconButton>
-        <IconButton
-          edge='start'
-          className={classes.menuButton}
-          color='inherit'
-          aria-label='menu'
-        >
-          <HomeSharp />
-        </IconButton>
-        <Typography variant='h6' className={classes.title}>
-          Welcome
-        </Typography>
-
+        <div className={classes.title}>
+          <IconButton
+            edge='start'
+            className={classes.menuButton}
+            color='inherit'
+            aria-label='menu'
+          >
+            <MenuIcon />
+          </IconButton>
+          <IconButton
+            edge='start'
+            className={classes.menuButton}
+            color='inherit'
+            aria-label='menu'
+          >
+            <HomeSharp />
+          </IconButton>
+        </div>
         {socialLinks.map((social) => (
           <IconButton
             edge='start'
