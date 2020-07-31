@@ -5,6 +5,11 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Instagram from '@material-ui/icons/Instagram';
+import Facebook from '@material-ui/icons/Facebook';
+import Github from '@material-ui/icons/GitHub';
+import LinkedIn from '@material-ui/icons/LinkedIn';
+import HomeSharp from '@material-ui/icons/HomeSharp';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,6 +23,25 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
+
+const socialLinks = [
+  {
+    icon: <LinkedIn />,
+    link: 'https://www.linkedin.com/in/matthewmarberry/',
+  },
+  {
+    icon: <Github />,
+    link: 'https://github.com/marberrym',
+  },
+  {
+    icon: <Instagram />,
+    link: 'https://www.instagram.com/jaydoee/?hl=en',
+  },
+  {
+    icon: <Facebook />,
+    link: 'https://www.facebook.com/jaydoeee/',
+  },
+];
 
 const Navbar = () => {
   const classes = useStyles();
@@ -33,9 +57,29 @@ const Navbar = () => {
         >
           <MenuIcon />
         </IconButton>
+        <IconButton
+          edge='start'
+          className={classes.menuButton}
+          color='inherit'
+          aria-label='menu'
+        >
+          <HomeSharp />
+        </IconButton>
         <Typography variant='h6' className={classes.title}>
           Welcome
         </Typography>
+
+        {socialLinks.map((social) => (
+          <IconButton
+            edge='start'
+            className={classes.menuButton}
+            color='inherit'
+            aria-label='menu'
+            href={social.link}
+          >
+            {social.icon}
+          </IconButton>
+        ))}
       </Toolbar>
     </AppBar>
   );

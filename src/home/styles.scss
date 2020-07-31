@@ -1,14 +1,16 @@
+$baseColor: #00008038;
+
 .headerImg {
   width: 100%;
 }
 
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('./innovation.jpg');
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  //   url('./innovation.jpg');
 
   /* Set a specific height */
-  height: 50%;
+  height: 80vh;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -19,4 +21,23 @@
 
 .page {
   height: 100vh;
+}
+
+.fullWidth {
+  width: 100% !important;
+  margin: 0px !important;
+}
+
+.width60 {
+  width: 60% !important;
+  height: 50vh !important;
+}
+
+.width40 {
+  width: 40% !important;
+  height: 50vh !important;
+}
+
+.blueBg {
+  background-color: $baseColor !important;
 }
